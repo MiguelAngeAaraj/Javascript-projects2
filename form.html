@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/intro.css">
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+<body>
+    <header id="header2">
+        <nav>
+            <ul id="navbar2">
+            <li id="auto_trader">auto trader</li>
+            <li><a href="intro.html">intro</a></li>
+            <li><a href="contact.html">contact us</a></li>
+            <li><a href="store.html">shopping</a></li>    
+            </ul>
+        </nav>
+    </header>
+<form id="form" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);margin-top: 70px;border-radius: 3px;">
+    <legend id="legend">SIGN in</legend>
+    <label for="email"  id="email_label">email address</label>
+    <input name="email" required id="email" type="email" placeholder="email">
+    <p id="email_error"></p>
+    <label for="phone" id="phone_label">telephone number</label>
+    <input name="phone" id="phone" type="tel" placeholder="phone number">
+    <p id="phone_error"></p>
+    <label for="password" id="password_label">password</label>
+    <input placeholder="password" name="password" id="password" type="password">
+    <p id="password_error"></p>
+    <p id="password_character_long">the password must be 8 characters long</p>
+    <p id="password_letter">password must contain one letter</p>
+    <p id="number_check">password must contains one number</p>
+    <p id="password_special">password must not contains special characters</p>
+    <p id="password_specific">password must contains (@ or # or $)</p>
+    <label for="password" id="password2_label">confirm password</label>
+    <input name="password" placeholder="password" id="password2" type="password">
+    <p id="confirm_pass_error"></p>
+    <p id="confirm_pass"></p>
+    <textarea id="texterea" placeholder="comment"></textarea>
+    <p id="textarea_characters">counting characters: <span id="character_length">0</span></p>
+    <p id="texterea_error"></p>
+    <button type="button" id="button2">click</button>
+  </form>
+</body>
+<script src="./javascript/form.js"></script>
+</html>

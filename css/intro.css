@@ -1,0 +1,416 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* header */
+#header {
+  background-color: #262626;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 111;
+}
+#brand {
+  color: red;
+  font-size: 40px;
+  position: relative;
+}
+#brand::after {
+  content: '';
+  width: 100px;
+  height: 40px;
+  position: absolute;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#menu > #items {
+  list-style: none;
+  margin: 10px 10px;
+}
+#menu > #items > #a_href {
+  color: red;
+  text-decoration: none;
+  font-size: 17px;
+}
+#menu > #items:last-of-type {
+  /* margin-right: -7px; */
+  position: relative;
+  cursor: pointer;
+  color: red;
+}
+#menu > #dropdwn_menu {
+  display: none;
+}
+#menu > #dropdwn_menu > #dropdown_items {
+  position: absolute;
+  top: 46px;
+  background: #262626;
+}
+#menu > #dropdwn_menu > #dropdown_items #car_type {
+  list-style: none;
+  padding-bottom: 3px;
+}
+
+#menu > #dropdwn_menu > #dropdown_items #car_type > #dropdown_list {
+  text-decoration: none;
+  color: red;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+#menu > #dropdwn_menu > #dropdown_items #car_type > #dropdown_list:hover {
+  padding-right: 10px;
+  background: red;
+  color: black;
+  transform: translateX(20px);
+}
+#navbar #button {
+  color: red;
+  text-decoration: none;
+  margin-right: 30px;
+}
+@media all and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+  #header {
+    background-color: #262626;
+    height: 60px;
+    z-index: 60;
+    position: fixed;
+    top: 0;
+  }
+  #navbar_toggle {
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 87%;
+  }
+  #navbar_toggle > #first_line:nth-child(1) {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+  }
+  #navbar_toggle > #first_line:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 10px;
+    background-color: red;
+  }
+  #navbar_toggle > #first_line:nth-child(3) {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 30px;
+    background-color: red;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /*  top:50px; */
+    top: -400px;
+    /*  background:#262626; */
+    z-index: 1;
+  }
+  #navbar::before {
+    content: '';
+    background: #262626;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    z-index: -2;
+  }
+  #menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu > #dropdwn_menu > #dropdown_items {
+    margin-left: 60px;
+    margin-top: 70px;
+    padding-bottom: 1px;
+  }
+  #menu > #dropdwn_menu {
+    display: none;
+  }
+  #button {
+    margin-left: 45px;
+    margin-top: 10px;
+  }
+}
+/*end of header*/
+/* history */
+#auto_trader_img {
+  width: 700px;
+  height: 400px;
+  object-fit: cover;
+  max-width: 100%;
+  margin-left: 300px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+#home #history {
+  margin-top: 83px;
+  margin-left: 20px;
+}
+#history_h1 {
+  text-transform: capitalize;
+  font-size: 27px;
+  color: rgba(255, 0, 0, 1);
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#auto_tader_history {
+  text-indent: 12px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  line-height: 1.2rem;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #fff;
+}
+#auto_history_1 {
+  text-indent: 12px;
+  font-family: inherit;
+  line-height: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+#sell_auto_trader {
+  color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 10px;
+}
+#types_cars {
+  color: #fff;
+  margin-left: 20px;
+}
+#types_cars > #types_items {
+  list-style: inside;
+  list-style: upper-latin;
+}
+/* history */
+/* caroussel */
+#caroussel {
+  margin-top: 20px;
+  display: flex;
+}
+#caroussel > #carousel_img {
+  width: 1178px;
+  max-width: 100%;
+  height: 360px;
+  display: none;
+  margin: 10px auto;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+body {
+  background: #262626;
+}
+/*caroussel*/
+
+/* cars definition */
+#cars_names {
+  color: #f00;
+  text-align: center;
+  font-size: 25px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+#cars_def2 {
+  display: flex;
+  flex-direction: column;
+}
+#cars_img {
+  float: left;
+  width: 500px;
+  height: 300px;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+#cars_info {
+  color: #fff;
+  margin-left: 520px;
+}
+#cars_def2 {
+  margin-bottom: 10px;
+}
+/* cars definition */
+/* mercedes */
+#read_more,
+#read_more1,
+#read_more2,
+#read_more3 {
+  color: red;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+#continue_read,
+#continue_read1,
+#continue_read2,
+#continue_read3 {
+  color: #fff;
+  display: none;
+  margin-left: 520px;
+}
+#mercedes_models #models {
+  list-style: inside;
+}
+#show_less,
+#show_less1,
+#show_less2,
+#show_less3 {
+  color: red;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+/* cars */
+
+@media all and (max-width: 768px) {
+  #auto_trader_img {
+    width: 400px;
+    max-width: 100%;
+    height: 300px;
+    margin-left: 0px;
+  }
+  #cars_img {
+    margin-bottom: 20px;
+    clear: both;
+  }
+  #cars_info {
+    margin-left: 0px;
+    clear: both;
+  }
+  #continue_read,
+  #continue_read1,
+  #continue_read2,
+  #continue_read3 {
+    margin-left: 0px;
+  }
+}
+/* cars */
+/* footer */
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  max-width: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 1px solid #fff;
+  margin-left: 20px;
+}
+#form input {
+  margin-bottom: 10px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+#form input:focus {
+  outline: 0;
+}
+#form input::placeholder {
+  text-align: center;
+}
+#form label {
+  color: #fff;
+  margin-bottom: 10px;
+}
+#form p {
+  margin-bottom: 10px;
+}
+#legend {
+  color: #f00;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+#texterea {
+  border-radius: 10px;
+  resize: none;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+#texterea:focus {
+  outline: 0;
+}
+#textarea_characters {
+  color: #fff;
+}
+#character_length {
+  color: red;
+}
+#password_character_long,
+#password_letter,
+#password_special,
+#password_specific,
+#number_check {
+  color: #fff;
+}
+/* footer */
+#maploc {
+  text-align: center;
+  color: #fff;
+  text-decoration: underline;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 10px;
+}
+#map {
+  width: 1300px;
+  max-width: 100%;
+  height: 500px;
+  border: 0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+  border-radius: 10px;
+}
+#scroll_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 10px 0 10px 0;
+  font-size: 24px;
+}
+#scroll_container > * {
+  margin-left: 10px;
+}
+#scrollTo {
+  transform: translateY(0px);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+#scrollTo:hover {
+  transform: translateY(-1.2px);
+  color: red;
+}
+#textscroll {
+  text-transform: capitalize;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

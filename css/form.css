@@ -1,0 +1,39 @@
+#header2{
+    background:#262626;
+    box-shadow:0 0 10px rgba(255,255,255,.6);
+}
+
+#navbar2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    text-transform: capitalize;
+    
+}
+#navbar2 #auto_trader{
+    color:red;
+    font-size: 23px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#navbar2 li{
+    list-style: none;
+    color:#fff;
+
+}
+#navbar2 li a{
+    color:#fff;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    font-size:23px;
+}
+@media all and (max-width:768px){
+    #navbar2 li a{
+        font-size:13px;
+    }
+
+    #navbar2 #auto_trader{
+        font-size:13px;
+    }
+}
